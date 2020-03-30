@@ -50,6 +50,6 @@ def all_holidays_with_bbq(holiday_hash)
         bbq_days << holiday
       end
     end
-    bbq_days
+    bbq_days.uniq
   end
 end
