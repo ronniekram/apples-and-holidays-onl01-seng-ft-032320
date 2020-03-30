@@ -43,13 +43,9 @@ end
 # etc.
 
 def all_holidays_with_bbq(holiday_hash)
-  bbq_days = Array.new
   holiday_hash.map do |season, holiday|
     holiday.map do |holiday, item|
-      if item.include?("BBQ")
-        bbq_days << holiday.uniq
-      end
+      holiday if item.include?("BBQ")
     end
-    bbq_days
   end
 end
